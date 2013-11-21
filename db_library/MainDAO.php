@@ -539,6 +539,18 @@ class MainDAO extends Database_MySql
 			}
 		 return $result;		
 	}
-	
+function loginUser($email,$password)
+	{
+		$returnVal=-1;
+		$qry	=	"SELECT id,password FROM `user` where email=?";
+		$param	=	array("i",$email);
+		$records	=	$this->fetchAll($qry,$param);
+		if(!empty($records)){
+			if ($records[0]["password"]==$password){
+				$returnVal=$records[0]["id"];
+			}
+		}
+		return $returnVal;
+	}	
 	
 }?>

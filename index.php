@@ -1,6 +1,6 @@
 <div style="float:right" id="navigation">
 <ul>
-<li><a href="#">signIn</a></li>
+<li><a href="signin.php">signIn</a></li>
 <li><a href="register.php">Register</a></li>
 </ul>
 </div>
